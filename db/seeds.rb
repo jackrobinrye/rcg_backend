@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# genders: male, female, non-binary, agender
+# statuses: DM, player
+
+# player seed data 
+# name age gender status
+jack = Player.create(name: "Jack", age: 25, gender: "agender", status: "DM")
+graelyn = Player.create(name: "Graelyn", age: 25, gender: "non-binary", status: "Player")
+sarah = Player.create(name: "Sarah", age: 25, gender: "non-binary", status: "Player")
+michelle = Player.create(name: "Michelle", age: 25, gender: "female", status: "Player")
