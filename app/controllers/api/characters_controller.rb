@@ -1,7 +1,8 @@
 class Api::CharactersController < ApplicationController
 
     def create
-        character = Character.new(character_params)
+        # byebug
+        character = Character.make_new(params[:player_id])
         if character.save 
             render json: character, status: :accepted
         else 
@@ -9,9 +10,29 @@ class Api::CharactersController < ApplicationController
         end 
     end 
 
-    private 
+    # t.integer "player_id"
+    # t.string "name"
+    # t.string "race"
+    # t.string "cclass"
+    # t.string "gender"
+    # t.string "background"
+    # t.string "alignment"
+    # t.string "pc"
+    # t.integer "strength"
+    # t.integer "dexterity"
+    # t.integer "constitution"
+    # t.integer "intelligence"
+    # t.integer "wisdom"
+    # t.integer "charisma"
 
-    def character_params
+
+
+
+
+    # private 
+
+    # def character_params
+        # byebug
         # "pc": false,
         # "name": "Gerdur The Old",
         # "gender": "Female",
@@ -28,7 +49,7 @@ class Api::CharactersController < ApplicationController
         # "player_id": 1,
         # // I don't remember what to do with player_id here. Do I just leave it as player_id
         # // or do I make it just player?
-        params.require(:character).permit(:pc, :name, :age, :gender, :race, :cclass, :background, :alignment, :strength, :dexterity, :constitution, :intelligence, :wisdom, :character, :player_id)
-    end
+    #     params.require(:character).permit(:pc, :name, :age, :gender, :race, :cclass, :background, :alignment, :strength, :dexterity, :constitution, :intelligence, :wisdom, :character, :player_id)
+    # end
 
 end
