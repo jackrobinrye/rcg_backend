@@ -6,6 +6,7 @@ class Api::PlayersController < ApplicationController
     end
 
     def create
+        byebug
         player = Player.new(player_params)
         if player.save 
             render json: player, status: :accepted
