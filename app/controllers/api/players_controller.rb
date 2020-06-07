@@ -6,7 +6,7 @@ class Api::PlayersController < ApplicationController
     end
 
     def create
-        byebug
+        # byebug
         player = Player.new(player_params)
         if player.save 
             render json: player, status: :accepted
@@ -25,7 +25,9 @@ class Api::PlayersController < ApplicationController
         # "dm": true
         # "created_at": "2020-06-03T21:57:13.747Z",
         # "updated_at": "2020-06-03T21:57:13.747Z",
-        params.require(:player).permit(:name, :age, :gender, :dm)
+        hash = params.require(:player).permit(:name, :age, :gender, :dm)
+        # byebug
+        # if hash[]
     end
 
 end
