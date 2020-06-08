@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2020_06_03_033750) do
     t.string "gender"
     t.string "background"
     t.string "alignment"
-    t.string "pc"
+    t.integer "age"
     t.integer "strength"
     t.integer "dexterity"
     t.integer "constitution"
@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 2020_06_03_033750) do
     t.string "name"
     t.integer "age"
     t.string "gender"
-    t.boolean "dm"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
