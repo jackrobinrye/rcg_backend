@@ -25,7 +25,7 @@ class Api::PlayersController < ApplicationController
         # "dm": true
         # "created_at": "2020-06-03T21:57:13.747Z",
         # "updated_at": "2020-06-03T21:57:13.747Z",
-        hash = params.require(:player).permit(:name, :age, :gender, :dm)
+        hash = params.require(:player).permit(:name, :age, :gender)
         # byebug
         # if hash[]
     end
